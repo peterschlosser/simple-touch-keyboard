@@ -34,13 +34,15 @@ Presented here are 4 keypad (keyboard) layouts, each corresponding to a keyboard
 
 The keypad is drawn within a "keyboard area" that is made of the kbd_buffer and the keypad.  
 
+The keypad is drawn as 4 rows of keys, with 5 special-keys present in every layout.  the 5 special-keys are: space-bar, back-space, enter, shift, and numeric.  The space-bar, backspace, and enter keys behave as typical without further comment.  The numeric key switches between the numeric and alpha-lower layouts.  The shift key shifts between alpha-upper and alpha-lower, or numeric and symbol layouts. 
+
 ![typing](assets/typing.png)
 
-The keypad is drawn as 4 rows of keys, with 5 special-keys present in every layout.  the 5 special-keys are: space-bar, back-space, enter, shift, and numeric.  The space-bar, backspace, and enter keys behave as typical without further comment.  The numeric key switches between the numeric and alpha-lower layouts.  The shift key shifts between alpha-upper and alpha-lower, or numeric and symbol layouts. 
+As keys are tapped, the running content in `kbd_buffer` is displayed immediately above the keypad at the top of the "keyboard area."  When enter is pressed, the buffer is returned as a string to the caller of `update_keyboard()`.  
 
 ![entered](assets/entered.png)
 
-As keys are tapped, the running content in `kbd_buffer` is displayed immediately above the keypad at the top of the "keyboard area."  when enter is pressed, the kbd_buffer is returned as a string to the caller of `update_keyboard()`.  In this demonstration, as full lines of text are returned by update_keyboard(), they are printed onto the display area above the keyboard area. 
+In this demonstration, as full lines of text are returned by `update_keyboard()`, they are printed onto the display area above the keyboard area. 
 
 ## Usage
 
