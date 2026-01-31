@@ -1,0 +1,13 @@
+changes to XPT2046_Touchscreen_TT library
+- resolves warning error.
+  TS_Display.h: changes order of variable initialization in constructor to match variable declaration order
+    from this:
+  TS_Display() : _ts(nullptr), _disp(nullptr), _TS_LR_X(0), _TS_LR_Y(0),
+      _TS_UL_X(0), _TS_UL_Y(0), _debounceMS_TR(DEF_DEBOUNCE_MS_TR),
+      _minTouchPres(DEF_MIN_TOUCH_PRES), _maxReleasePres(DEF_MAX_RELEASE_PRES),
+      _lastEventWasTouch(false), _msTime(millis()), _pixelsX(0), _pixelsY(0) {}
+    to this:
+  TS_Display() : _ts(nullptr), _disp(nullptr), _TS_UL_X(0), _TS_UL_Y(0), 
+      _TS_LR_X(0), _TS_LR_Y(0), _debounceMS_TR(DEF_DEBOUNCE_MS_TR),
+      _minTouchPres(DEF_MIN_TOUCH_PRES), _maxReleasePres(DEF_MAX_RELEASE_PRES),
+      _lastEventWasTouch(false), _msTime(millis()), _pixelsX(0), _pixelsY(0) {}
