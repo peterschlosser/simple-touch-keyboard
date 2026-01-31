@@ -14,12 +14,12 @@ This project provides a lightweight, easy-to-use touch keyboard implementation o
 -   **Simple implementation**: Easy to integrate into existing projects
 -   **Touch-friendly**: Optimized for touch input interfaces
 
-| | |
+| upper-alpha | lower-alpha |
 | :---: | :---: |
 | ![upper-alpha](assets/Layout_Upper.png) | ![upper-lower](assets/Layout_Lower.png) |
-| upper-alpha | lower-alpha |
-| ![upper-alpha](assets/Layout_Numeric.png) | ![upper-alpha](Layout_Symbol.png) |
 | numeric | symbol |
+| ![numeric](assets/Layout_Numeric.png) | ![symbol ](Layout_Symbol.png) |
+
 
 ## Detail
 For projects in need of alpha-numeric user input via touch panel on smaller lightweight MCUs, this project demonstrates a fully functioning keyboard similar to those presented by mobile devices, and offers a means to get user input to their application. 
